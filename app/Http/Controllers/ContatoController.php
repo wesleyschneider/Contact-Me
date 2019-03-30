@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use App\Http\Requests\ContatoEnviarRequest;
 use App\Http\Controllers\Controller;
 use App\Contato;
 
@@ -14,7 +14,7 @@ class ContatoController extends Controller
         return view('welcome');
     }
 
-    public function enviar(Request $request, Contato $contato, \App\NotificacaoInterface $notificar){
+    public function enviar(ContatoEnviarRequest $request, Contato $contato, \App\NotificacaoInterface $notificar){
         $contato->nome = $request->get("nome");
         $contato->email = $request->get("email");
         $contato->mensagem = $request->get("mensagem");
