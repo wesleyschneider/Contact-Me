@@ -22,6 +22,7 @@
           <th>Nome</th>
           <th>Email</th>
           <th>Mensagem</th>
+          <th>Categoria</th>
         </tr>
       </thead>
       <tbody>
@@ -31,6 +32,7 @@
           <td>{{ $row->nome }}</td>
           <td>{{ $row->email }}</td>
           <td>{{ $row->mensagem }}</td>
+          <td>{{ $row->categoria->nome }}</td>
         </tr>
         @endforeach
       </tbody>
