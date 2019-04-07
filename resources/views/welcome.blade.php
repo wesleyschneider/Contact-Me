@@ -42,7 +42,17 @@
         <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Digite sua mensagem"></textarea>
       </div>
 
+      <div class="form-group">
+        <select name="categoria_id" id="categoria_id" class="form-control">
+          <option value="null">Selecione</option>
+          @foreach(App\Categoria::all() as $categoria)
+            <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
+          @endforeach
+        </select>
+      </div>
+
       <button type="submit" class="btn btn-default">Enviar</button>
+      <a href="lista" class="btn btn-primary">Lista</a>
 
     </form>
 
