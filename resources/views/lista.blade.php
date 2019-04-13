@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>ContactMe</title>
+@extends('app')
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-</head>
-<body>
-
-<div class="container">
-
+@section('conteudo')
     <h1>Lista de mensagens</h1>
 
     <hr />
@@ -38,7 +28,6 @@
       </tbody>
     </table>
 
-</div>
-
-</body>
-</html>
+    <a href="/" class="btn btn-primary">Enviar mensagem</a>
+    <a href="auth/logout" class="btn btn-danger">Logout</a>
+@endsection
